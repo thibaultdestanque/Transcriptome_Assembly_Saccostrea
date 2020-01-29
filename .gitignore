@@ -14,4 +14,4 @@ BUSCO/
 98_log_files/
 busco_downloads/
 Genome_S.glomerata/
-.nextflow/*
+.nextflow/
