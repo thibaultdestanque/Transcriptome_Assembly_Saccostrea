@@ -1,0 +1,117 @@
+Jan-22 01:25:33.910 [main] DEBUG nextflow.cli.Launcher - $> nextflow run main.nf -resume
+Jan-22 01:25:34.175 [main] INFO  nextflow.cli.CmdRun - N E X T F L O W  ~  version 19.07.0
+Jan-22 01:25:34.430 [main] INFO  nextflow.cli.CmdRun - Launching `main.nf` [focused_engelbart] - revision: 519a837215
+Jan-22 01:25:34.441 [main] DEBUG nextflow.config.ConfigBuilder - Found config local: /home1/datawork/tdestanq/dev_larve_2019/Transcriptome_Saccostrea/nextflow.config
+Jan-22 01:25:34.441 [main] DEBUG nextflow.config.ConfigBuilder - Parsing config file: /home1/datawork/tdestanq/dev_larve_2019/Transcriptome_Saccostrea/nextflow.config
+Jan-22 01:25:34.463 [main] DEBUG nextflow.config.ConfigBuilder - Applying config profile: `standard`
+Jan-22 01:25:35.210 [main] DEBUG nextflow.Session - Session uuid: e7c5b17b-a2e0-4eed-9f77-4133812e55d1
+Jan-22 01:25:35.210 [main] DEBUG nextflow.Session - Run name: focused_engelbart
+Jan-22 01:25:35.211 [main] DEBUG nextflow.Session - Executor pool size: 56
+Jan-22 01:25:35.220 [main] DEBUG nextflow.cli.CmdRun - 
+  Version: 19.07.0 build 5106
+  Created: 27-07-2019 13:22 UTC (13:22 GMT)
+  System: Linux 3.12.53-60.30-default
+  Runtime: Groovy 2.5.6 on OpenJDK 64-Bit Server VM 1.8.0_152-release-1056-b12
+  Encoding: UTF-8 (UTF-8)
+  Process: 41659@datarmor3 [10.148.1.147]
+  CPUs: 56 - Mem: 125.8 GB (3.3 GB) - Swap: 2 GB (1.5 GB)
+Jan-22 01:25:35.296 [main] DEBUG nextflow.Session - Work-dir: /home1/datawork/tdestanq/dev_larve_2019/Transcriptome_Saccostrea/work [gpfs]
+Jan-22 01:25:35.297 [main] DEBUG nextflow.Session - Script base path does not exist or is not a directory: /home1/datawork/tdestanq/dev_larve_2019/Transcriptome_Saccostrea/bin
+Jan-22 01:25:35.602 [main] DEBUG nextflow.Session - Session start invoked
+Jan-22 01:25:35.835 [main] DEBUG nextflow.script.ScriptRunner - > Launching execution
+Jan-22 01:25:35.844 [main] INFO  nextflow.Nextflow - 
+Jan-22 01:25:35.845 [main] INFO  nextflow.Nextflow - 
+Jan-22 01:25:35.845 [main] INFO  nextflow.Nextflow -         =================================================
+Jan-22 01:25:35.845 [main] INFO  nextflow.Nextflow -               MAKE TRANSCRIPTOME PIPELINE NEXTFLOW 
+Jan-22 01:25:35.845 [main] INFO  nextflow.Nextflow -         =================================================
+Jan-22 01:25:35.845 [main] INFO  nextflow.Nextflow - 
+Jan-22 01:25:35.845 [main] INFO  nextflow.Nextflow - 
+Jan-22 01:25:35.845 [main] INFO  nextflow.Nextflow -         Parameters used:
+Jan-22 01:25:35.846 [main] INFO  nextflow.Nextflow -             - fastq             : Fastq/*_{R1,R2}.fastq.gz
+Jan-22 01:25:35.846 [main] INFO  nextflow.Nextflow -             - Genome path       : /home1/datawork/tdestanq/dev_larve_2019/Transcriptome_Saccostrea/Ref_Genome
+Jan-22 01:25:35.846 [main] INFO  nextflow.Nextflow - 
+Jan-22 01:25:35.846 [main] INFO  nextflow.Nextflow -         Results will be store in:
+Jan-22 01:25:35.846 [main] INFO  nextflow.Nextflow -             results
+Jan-22 01:25:35.846 [main] INFO  nextflow.Nextflow - 
+Jan-22 01:25:35.846 [main] INFO  nextflow.Nextflow -         Process are stored in:
+Jan-22 01:25:35.846 [main] INFO  nextflow.Nextflow -             work/
+Jan-22 01:25:35.847 [main] INFO  nextflow.Nextflow - 
+Jan-22 01:25:35.847 [main] INFO  nextflow.Nextflow - 
+Jan-22 01:25:35.847 [main] INFO  nextflow.Nextflow -         ===================
+Jan-22 01:25:35.847 [main] INFO  nextflow.Nextflow -           Launch pipeline  
+Jan-22 01:25:35.847 [main] INFO  nextflow.Nextflow -         ===================
+Jan-22 01:25:35.847 [main] INFO  nextflow.Nextflow - 
+Jan-22 01:25:35.887 [PathVisitor-1] DEBUG nextflow.file.PathVisitor - files for syntax: glob; folder: Fastq/; pattern: *_{R1,R2}.fastq.gz; options: [:]
+Jan-22 01:25:35.988 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: pbs
+Jan-22 01:25:35.988 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'pbs'
+Jan-22 01:25:35.994 [main] DEBUG nextflow.executor.Executor - [warm up] executor > pbs
+Jan-22 01:25:35.999 [main] DEBUG n.processor.TaskPollingMonitor - Creating task monitor for executor 'pbs' > capacity: 100; pollInterval: 5s; dumpInterval: 5m 
+Jan-22 01:25:36.003 [main] DEBUG n.executor.AbstractGridExecutor - Creating executor 'pbs' > queue-stat-interval: 1m
+Jan-22 01:25:36.029 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > Fastqc_row_data -- maxForks: 56
+Jan-22 01:25:36.054 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: pbs
+Jan-22 01:25:36.055 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'pbs'
+Jan-22 01:25:36.057 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > Trim -- maxForks: 56
+Jan-22 01:25:36.062 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: pbs
+Jan-22 01:25:36.062 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'pbs'
+Jan-22 01:25:36.063 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > Fastqc_trimmed -- maxForks: 56
+Jan-22 01:25:36.078 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: pbs
+Jan-22 01:25:36.078 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'pbs'
+Jan-22 01:25:36.080 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > Trinity_Assembly -- maxForks: 56
+Jan-22 01:25:36.083 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: pbs
+Jan-22 01:25:36.083 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'pbs'
+Jan-22 01:25:36.084 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > BUSCO_evaluate_assembly -- maxForks: 56
+Jan-22 01:25:36.086 [main] DEBUG nextflow.executor.ExecutorFactory - << taskConfig executor: pbs
+Jan-22 01:25:36.086 [main] DEBUG nextflow.executor.ExecutorFactory - >> processorType: 'pbs'
+Jan-22 01:25:36.086 [main] DEBUG nextflow.processor.TaskProcessor - Creating operator > Transdecoder -- maxForks: 56
+Jan-22 01:25:36.090 [main] DEBUG nextflow.script.ScriptRunner - > Await termination 
+Jan-22 01:25:36.090 [main] DEBUG nextflow.Session - Session await
+Jan-22 01:25:36.149 [Actor Thread 16] DEBUG nextflow.conda.CondaCache - Conda found local env for environment=bioconda::fastqc; path=/home1/datawork/tdestanq/dev_larve_2019/Transcriptome_Saccostrea/work/conda/env-2472c99747f9fb1a6eef40cd9db2844a
+Jan-22 01:25:36.192 [Actor Thread 16] DEBUG nextflow.conda.CondaCache - Conda found local env for environment=bioconda::trimmomatic=0.36; path=/home1/datawork/tdestanq/dev_larve_2019/Transcriptome_Saccostrea/work/conda/env-c5e88bf859ab67452cfbf55547435bc7
+Jan-22 01:25:36.246 [Actor Thread 6] INFO  nextflow.processor.TaskProcessor - [af/bdd159] Cached process > Fastqc_row_data (4)
+Jan-22 01:25:36.246 [Actor Thread 14] INFO  nextflow.processor.TaskProcessor - [82/aff38c] Cached process > Trim (NEBNext_dual_i5_G8.T2_1)
+Jan-22 01:25:36.246 [Actor Thread 7] INFO  nextflow.processor.TaskProcessor - [00/286d8e] Cached process > Fastqc_row_data (5)
+Jan-22 01:25:36.246 [Actor Thread 10] INFO  nextflow.processor.TaskProcessor - [15/a3abc5] Cached process > Fastqc_row_data (8)
+Jan-22 01:25:36.246 [Actor Thread 9] INFO  nextflow.processor.TaskProcessor - [00/1bd194] Cached process > Fastqc_row_data (7)
+Jan-22 01:25:36.246 [Actor Thread 5] INFO  nextflow.processor.TaskProcessor - [d7/bcfc9b] Cached process > Fastqc_row_data (3)
+Jan-22 01:25:36.246 [Actor Thread 3] INFO  nextflow.processor.TaskProcessor - [59/be9c62] Cached process > Fastqc_row_data (1)
+Jan-22 01:25:36.246 [Actor Thread 4] INFO  nextflow.processor.TaskProcessor - [ed/be416a] Cached process > Fastqc_row_data (2)
+Jan-22 01:25:36.246 [Actor Thread 8] INFO  nextflow.processor.TaskProcessor - [54/164d71] Cached process > Fastqc_row_data (6)
+Jan-22 01:25:36.246 [Actor Thread 12] INFO  nextflow.processor.TaskProcessor - [ca/d465d6] Cached process > Trim (NEBNext_dual_i5_D8.T1_1)
+Jan-22 01:25:36.246 [Actor Thread 15] INFO  nextflow.processor.TaskProcessor - [29/1678eb] Cached process > Trim (NEBNext_dual_i5_E9.T4_1)
+Jan-22 01:25:36.246 [Actor Thread 13] INFO  nextflow.processor.TaskProcessor - [01/47dae9] Cached process > Trim (NEBNext_dual_i5_B9.T3_1)
+Jan-22 01:25:36.269 [Actor Thread 8] DEBUG n.util.BlockingThreadExecutorFactory - Thread pool name=FileTransfer; maxThreads=168; maxQueueSize=504; keepAlive=1m
+Jan-22 01:25:36.276 [Actor Thread 18] INFO  nextflow.processor.TaskProcessor - [42/db1d91] Cached process > Fastqc_trimmed (1)
+Jan-22 01:25:36.286 [Actor Thread 17] INFO  nextflow.processor.TaskProcessor - [9d/d364a9] Cached process > Fastqc_trimmed (2)
+Jan-22 01:25:36.294 [Actor Thread 20] INFO  nextflow.processor.TaskProcessor - [d5/f3856f] Cached process > Fastqc_trimmed (3)
+Jan-22 01:25:36.301 [Actor Thread 20] DEBUG nextflow.conda.CondaCache - Conda found local env for environment=bioconda::trinity=2.8.5 bioconda::bowtie2 bioconda::salmon bioconda::samtools anaconda::numpy; path=/home1/datawork/tdestanq/dev_larve_2019/Transcriptome_Saccostrea/work/conda/env-eb55ee5c629871e1e8103bf7cb93b019
+Jan-22 01:25:36.310 [Actor Thread 14] INFO  nextflow.processor.TaskProcessor - [09/2db769] Cached process > Trinity_Assembly
+Jan-22 01:25:36.319 [Actor Thread 16] INFO  nextflow.processor.TaskProcessor - [8e/8f22aa] Cached process > Fastqc_trimmed (4)
+Jan-22 01:25:36.353 [Actor Thread 16] DEBUG nextflow.conda.CondaCache - Conda found local env for environment=bioconda::transdecoder=5.5.0; path=/home1/datawork/tdestanq/dev_larve_2019/Transcriptome_Saccostrea/work/conda/env-21914993511aefef649d4cab7ff07c3d
+Jan-22 01:25:36.353 [Actor Thread 11] DEBUG nextflow.conda.CondaCache - Conda found local env for environment=bioconda::busco=4.0.1 bioconda::trinity=2.8.5; path=/home1/datawork/tdestanq/dev_larve_2019/Transcriptome_Saccostrea/work/conda/env-09ec390cc4332c226e0a8393cd810bf1
+Jan-22 01:25:36.386 [Actor Thread 13] INFO  nextflow.processor.TaskProcessor - [43/c1ee64] Cached process > Transdecoder
+Jan-22 01:25:36.475 [Task submitter] DEBUG nextflow.executor.GridTaskHandler - [PBS] submitted process BUSCO_evaluate_assembly > jobId: 7252250.datarmor0; workDir: /home1/datawork/tdestanq/dev_larve_2019/Transcriptome_Saccostrea/work/f0/700891666128216d075b12f833b342
+Jan-22 01:25:36.478 [Task submitter] INFO  nextflow.Session - [f0/700891] Submitted process > BUSCO_evaluate_assembly
+Jan-22 01:25:41.020 [Task monitor] WARN  n.executor.AbstractGridExecutor - [PBS] queue (sequentiel) status cannot be fetched
+- cmd executed: bash -c set -o pipefail; qstat -f -1 sequentiel | { egrep '(Job Id:|job_state =)' || true; }
+- exit status : 2
+- output      :
+  qstat: conflicting options.
+  usage: 
+  qstat [-f] [-J] [-p] [-t] [-x] [-E] [ job_identifier... | destination... ]
+  qstat [-a|-i|-r|-H|-T] [-J] [-t] [-u user] [-n] [-s] [-G|-M] [-1] [-w]
+  	[ job_identifier... | destination... ]
+  qstat -Q [-f] [ destination... ]
+  qstat -q [-G|-M] [ destination... ]
+  qstat -B [-f] [ server_name... ]
+  qstat --version
+
+Jan-22 01:25:56.013 [Task monitor] DEBUG n.processor.TaskPollingMonitor - Task completed > TaskHandler[jobId: 7252250.datarmor0; id: 18; name: BUSCO_evaluate_assembly; status: COMPLETED; exit: 0; error: -; workDir: /home1/datawork/tdestanq/dev_larve_2019/Transcriptome_Saccostrea/work/f0/700891666128216d075b12f833b342 started: 1579656341012; exited: 2020-01-22T01:25:51.031128Z; ]
+Jan-22 01:25:56.076 [main] DEBUG nextflow.Session - Session await > all process finished
+Jan-22 01:26:01.008 [main] DEBUG nextflow.Session - Session await > all barriers passed
+Jan-22 01:26:01.009 [main] INFO  nextflow.Nextflow - 
+
+Done! Results files are stocked in --> results ;)
+
+Jan-22 01:26:01.014 [main] DEBUG nextflow.trace.StatsObserver - Workflow completed > WorkflowStats[succeedCount=1; failedCount=0; ignoredCount=0; cachedCount=18; succeedDuration=15s; failedDuration=0ms; cachedDuration=16d 11h 5m 6s]
+Jan-22 01:26:01.098 [main] DEBUG nextflow.CacheDB - Closing CacheDB done
+Jan-22 01:26:01.114 [main] DEBUG nextflow.script.ScriptRunner - > Execution complete -- Goodbye

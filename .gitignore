@@ -1,0 +1,17 @@
+*.err
+*.out
+*.sam
+*.bam
+*.gz
+*.fastq
+*.fasta
+*.fq
+work/
+results/
+pipeline_info/
+results/
+BUSCO/
+98_log_files/
+busco_downloads/
+Genome_S.glomerata/
+.nextflow/*
